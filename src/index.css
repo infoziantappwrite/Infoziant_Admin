@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-checkbox:checked {
+  padding: 10px;
+  position: relative;
+}
+
+.custom-checkbox:checked::after {
+  content: '✔';
+  font-size: 16px;
+  padding: 5px;
+  color: white; /* kept white for contrast */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Updated Custom Gradient Border with White to Teal-Blue */
+.border-t-gradient {
+  border-top: 8px solid transparent;
+  border-image: linear-gradient(90deg,  #190087, #008f7e); /* white to sky-blue to teal */
+  border-image-slice: 1;
+}
+
+.border-l-gradient {
+  border-left: 8px solid transparent;
+  border-image: linear-gradient(0deg,  #190087, #008f7e); /* vertical variant */
+  border-image-slice: 1;
+}
+
+.animate-spin {
+  animation: spin 1.5s linear infinite;
+}
+
+.loader-text {
+  animation: glow 1.5s infinite alternate;
+}
+.circle-loader {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 6px solid transparent;
+  border-top-color: #ffffff;
+  border-right-color: #1c0081; /* sky-blue */
+  border-bottom-color: #007e70; /* teal */
+  animation: spin 1s linear infinite;
+}
+
