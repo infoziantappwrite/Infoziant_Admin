@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 
 const Profile = () => {
@@ -136,9 +137,9 @@ const Profile = () => {
              
               <button
                 className="px-6 py-2 font-semibold rounded-md
-               px-6 py-2 font-semibold rounded-md
+              
                 bg-gradient-to-r from-blue-800 to-teal-500
-                text-white shadow-md hover:brightness-110 transition shadow-md hover:bg-gray-300 transition"
+                text-white shadow-md hover:brightness-110 hover:bg-gray-300 transition"
                 onClick={() => setChangingPassword(!changingPassword)}
               >
                 {changingPassword ? "Cancel Password Change" : "Change Password"}
@@ -189,7 +190,7 @@ const Profile = () => {
                 className="px-6 py-3 font-semibold rounded-md
                
                 bg-gradient-to-r from-blue-500 via-teal-500 to-green-300
-                text-white shadow-md hover:brightness-110 transition
+               
                 text-white shadow-md hover:brightness-110 transition"
               >
                 Save
