@@ -29,7 +29,7 @@ const Header = () => {
       });
 
       if (response.ok) {
-        navigate("/login"); // Redirect to login after logout
+        navigate("/"); // Redirect to login after logout
       } else {
         alert("Logout failed, please try again.");
       }
