@@ -66,11 +66,11 @@ const Header = () => {
             </button>
 
             {dropdownOpen && (
-              <div className="absolute  right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg py-2 text-gray-800 z-[10]">
+              <div className="absolute  right-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg py-0 text-gray-800 z-[10]">
                 <NavLink
                   to="/profile"
                   onClick={() => setDropdownOpen(false)}
-                  className="block px-4 py-2 hover:bg-gradient-to-r hover:from-blue-800 hover:to-teal-500 hover:text-white transition flex items-center gap-2"
+                  className="border-b border-gray-300 px-4 py-2 hover:bg-gradient-to-r hover:from-blue-800 hover:to-teal-500 hover:text-white transition flex items-center gap-2"
                 >
                   <FaUserCircle /> Profile
                 </NavLink>
@@ -78,7 +78,7 @@ const Header = () => {
                 <NavLink
                   to="/jobs"
                   onClick={() => setDropdownOpen(false)}
-                  className="block px-4 py-2 hover:bg-gradient-to-r hover:from-blue-800 hover:to-teal-500 hover:text-white transition flex items-center gap-2"
+                  className="border-b border-gray-300 px-4 py-2 hover:bg-gradient-to-r hover:from-blue-800 hover:to-teal-500 hover:text-white transition flex items-center gap-2"
                 >
                   <FaBriefcase /> Jobs
                 </NavLink>
@@ -86,7 +86,7 @@ const Header = () => {
                 <NavLink
                   to="/applications"
                   onClick={() => setDropdownOpen(false)}
-                  className="block px-4 py-2 hover:bg-gradient-to-r hover:from-blue-800 hover:to-teal-500 hover:text-white transition flex items-center gap-2"
+                  className="border-b border-gray-300 px-4 py-2 hover:bg-gradient-to-r hover:from-blue-800 hover:to-teal-500 hover:text-white transition flex items-center gap-2"
                 >
                   <FaFileAlt /> Applications
                 </NavLink>
@@ -103,17 +103,7 @@ const Header = () => {
         </nav>
 
         {/* Mobile menu toggle */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden ml-4 focus:outline-none"
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? (
-            <FaTimes className="text-2xl text-gray-700" />
-          ) : (
-            <FaBars className="text-2xl text-gray-700" />
-          )}
-        </button>
+        
       </div>
 
       {/* Mobile menu */}
